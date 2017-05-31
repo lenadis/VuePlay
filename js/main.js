@@ -8,17 +8,18 @@ var demo = new Vue({
 	// Define properties and give them initial values.
 	data: {
 		active: 'home',
-		result: [123],
+		sheet1: [],
+		sheet2: [],
 	},
 
-	mounted: function() {
+	beforeCreate: function() {
 		var that = this;
 		var tabletop = Tabletop.init({
 			key: '14WNDvoloeWELEGt0r_5Ldxtuiqcyv8ElX09wccq80d8',
 			callback: function(data, tabletop) {
-				console.log(data);
-				that.result = data.Sheet1.elements;
-				console.log(that.result);
+				that.sheet1 = data.Sheet1.elements;
+				that.sheet2 = data.Sheet2.elements;
+				console.log(that.sheet1);
 			}
 		})
 
