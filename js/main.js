@@ -19,7 +19,7 @@ var demo = new Vue({
 			callback: function(data, tabletop) {
 				that.sheet1 = data.Sheet1.elements;
 				that.sheet2 = data.Sheet2.elements;
-				console.log(that.sheet1);
+				console.log(that.sheet1[1].Place);
 			}
 		})
 

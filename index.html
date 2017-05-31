@@ -75,8 +75,7 @@
             </div>
           </nav>
           <div class="col-sm-10">
-            <p v-for='item in sheet1'>{{item.Name}}</p>
-            <p v-for='item in sheet2'>{{item.Name}}</p>
+
             <table class="table">
               <tr>
                 <th></th>
@@ -92,7 +91,7 @@
               </tr>
               <tr>
                 <td>Auditorium</td>
-                <td v-for='item in sheet1'>{{item.Name}}</td>
+                <td>{{sheet1[0].Name}}</td>
               </tr>
               <tr>
                 <td>Room 1</td>
